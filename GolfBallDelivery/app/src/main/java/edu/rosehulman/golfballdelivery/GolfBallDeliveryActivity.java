@@ -1,6 +1,5 @@
 package edu.rosehulman.golfballdelivery;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -15,7 +14,9 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class GolfBallDeliveryActivity extends Activity {
+import edu.rosehulman.me435.RobotActivity;
+
+public class GolfBallDeliveryActivity extends RobotActivity {
 
 	/** Constant used with logging that you'll see later. */
 	public static final String TAG = "GolfBallDelivery";
@@ -179,12 +180,14 @@ public class GolfBallDeliveryActivity extends Activity {
 
     // --------------------------- Methods added ---------------------------
 
+    @Override
+    public void loop() {
+        super.loop();
 
-	
-	
-	
-	
-	// --------------------------- Drive command ---------------------------
+    }
+
+
+    // --------------------------- Drive command ---------------------------
 	
 	
 
@@ -255,6 +258,8 @@ public class GolfBallDeliveryActivity extends Activity {
      */
     public void handlePerformBallTest(View view) {
         Toast.makeText(this, "TODO: Implement handlePerformBallTest", Toast.LENGTH_SHORT).show();
+
+        speak("To do perform a ball test");
     }
 
     AlertDialog alert;
